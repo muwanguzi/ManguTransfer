@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_activity__available_farm_projects"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mangu.transfer.ui.Activity_AvailableFarm_projects"
+    tools:showIn="@layout/activity__available_farm_projects">
+
+    <TextView
+        android:id="@+id/txt_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/abc_button_inset_vertical_material"
+        android:padding="4sp"
+        android:text="Select project to add to wish list"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_instruction"
+        android:dividerHeight="1dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/days"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:background="@drawable/reounded_textview"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="60"
+                android:textColor="@color/accent"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hours"
+                android:layout_marginStart="8dp"
+                android:fontFamily="serif"
+                android:text="@string/days"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!--<view
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/black">
+        </view>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hours"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/reounded_textview"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="11"
+                android:textColor="@color/accent"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/hours"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!-- <view
+             android:layout_width="0dp"
+             android:layout_height="140dp"
+             android:layout_marginStart="4dp"
+             android:layout_marginEnd="4dp"
+             android:background="@color/black">
+         </view>-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/minute"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/reounded_textview"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="29"
+                android:textColor="@color/accent"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hours"
+                android:layout_marginStart="8dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/minutes"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <!-- <view
+             android:layout_width="0dp"
+             android:layout_height="140dp"
+             android:layout_marginStart="4dp"
+             android:layout_marginEnd="4dp"
+             android:background="@color/black">
+         </view>-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/seconds"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/reounded_textview"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="6"
+                android:textColor="@color/accent"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seconds"
+                android:layout_marginStart="8dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/seconds"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

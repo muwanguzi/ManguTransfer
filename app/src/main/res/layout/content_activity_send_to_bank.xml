@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_4"
+    android:paddingRight="@dimen/padding_4"
+    android:paddingBottom="@dimen/padding_4"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mangu.transfer.ui.Activity_send_to_bank"
+    tools:showIn="@layout/activity_send_to_bank">
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:imeOptions="flagNoExtractUi"
+            android:paddingTop="6dp"
+            android:text="Select Bank"
+            android:textAlignment="viewStart"
+            android:textColor="@color/gray_text"
+            android:textSize="14sp"
+            tools:targetApi="lollipop" />
+
+        <Spinner
+            android:id="@+id/myspinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_4"
+            android:popupBackground="@android:color/transparent"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_sendReceive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_name"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.0"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding_4"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/placeholder_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:imeOptions="flagNoExtractUi"
+                android:text="UGX:"
+                android:textColor="@color/gray_text"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editText_send"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="0.00"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="5.0dip"
+                android:textColorHint="@color/lightGray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.0"
+            android:orientation="horizontal"
+            android:paddingTop="12dp"
+            android:paddingEnd="@dimen/padding_4">
+
+            <TextView
+                android:id="@+id/placeholder_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:background="@null"
+                android:imeOptions="flagNoExtractUi"
+                android:text="Dollars:"
+                android:textColor="@color/gray_text"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editText_receive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="0.00"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="5.0dip"
+                android:textColorHint="@color/lightGray"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/explainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/error_message"
+        android:layout_marginTop="0.0dip">
+
+        <TextView
+            android:id="@+id/rate_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:textColor="#ff6fb611"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_promo_code"
+            android:layout_width="fill_parent"
+            android:layout_height="24.0dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5.0dip"
+            android:background="@android:color/transparent"
+
+            android:textColor="@color/waveBlue"
+            android:textSize="12.0sp" />
+        <!--  android:text="Got a promo code?" -->
+
+
+        <ImageView
+            android:id="@+id/imageView_explainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate_message"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:src="@mipmap/mangu_to_mtn" />
+
+        <TextView
+            android:id="@+id/lbl_explainerRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView_explainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:text="Instant Transfer at the Best Rates"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/darkGray" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/waveBlue"
+
+        android:imeOptions="flagNoExtractUi"
+        android:text="Continue"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/acc_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_phone"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:hint="Account Name"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/contact_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_number"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:hint="Phone Number"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textEmailAddress|phone"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/acc_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:hint="Account Number"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="text|number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout_sendReceive"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:imeOptions="flagNoExtractUi"
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark" />
+</RelativeLayout>
+
+
+
+
+
+
+
+
+

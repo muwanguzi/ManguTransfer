@@ -1,0 +1,13 @@
+compileJava {
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+
+    def jdk7Home = hasProperty('JAVA7_HOME') ? JAVA7_HOME : System.getenv()['JAVA7_HOME']
+    if (jdk7Home != null) {
+        options.bootClasspath = (new File(jdk7Home, "/jre/lib/rt.jar")).canonicalPath
+    } else {
+        logger.warn('JAVA7_HOME is not known. ' +
+                'Please set it (either in gradle.properties or as enviromental variable) so compatibility can be checked')
+    }
+}
+

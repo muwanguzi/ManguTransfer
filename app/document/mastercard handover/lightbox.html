@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Mangu Mangu Card Payment Signout</title>
+    <meta name="keywords" content="mangu mangu payments">
+    <meta name="Description" content="Payments with Cards">
+    <link rel="shortcut icon" href="/mf3/images/fav.ico">
+    <link rel="stylesheet" href="/mf3/css/open-sans.css">
+    <link rel="stylesheet" href="/mf3/css/glyphicons.css">
+    <link rel="stylesheet" href="/mf3/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/mf3/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/mf3/slides/engine1/style.css"/>
+
+    <link href="/mf3/assets/css/custom.css" rel="stylesheet">
+
+    <!-- Owl Carousel Assets -->
+    <link href="/mf3/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/mf3/owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <script src="/mf3/assets/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/mf3/slides/engine1/jquery.js"></script>
+    <script src="/mf3/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- Frontpage Demo -->
+    <script src="/mf3/assets/js/bootstrap-collapse.js"></script>
+    <script src="/mf3/assets/js/bootstrap-transition.js"></script>
+    <script src="/mf3/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/mf3/assets/js/application.js"></script>
+    <script src="/mf3/js/carousel.js"></script>
+
+    <meta name="description" content="">
+
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="dist/ladda.min.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+#myChatLinkInfo{
+	background:url(https://cayman-consults.custhelp.com/rnt/rnw/img/enduser/chat_image.jpg) no-repeat;
+		position:fixed;
+		bottom:0px;
+		right:0px;
+		height:96px;
+		width:205px;
+		color:#fff;
+		overflow:hidden;
+		}
+	#myChatLinkInfo span{
+		display:none;
+		}  
+	body{
+		background-color: #fff;
+		color:black;
+	}
+	input{
+		background-color: #FFCC33;
+        	outline: none;
+        	border: none;
+       		width: 100%;
+		
+		padding-bottom:10px;
+        	padding-top:10px;
+        	margin: 10px 0px 0px 0px;
+		color: #000;
+       
+	}
+	.p{
+		padding:20px;
+		background-color: #fff;
+		color: #000;   
+	}
+    
+    .p1,.p2,.p3{
+       display: inline-block;
+    text-decoration: none;
+    border-bottom: 3px solid #ccc;
+}
+
+h3{
+    color: #FF6666;
+     display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #FF6666;
+    font-size: 16px;
+    
+}
+td{
+    padding: 20px
+}
+.last{
+    font-weight: 700;
+}
+.handing{
+    float: center;
+    margin-left: 0px;
+    color: #666666;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #fcb040;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 99%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float:center;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+table{
+    float: center;
+}
+
+    </style>
+
+    <!--Master Card Integration Code-->
+    <script src="https://orientbank.test.gateway.mastercard.com/checkout/version/38/checkout.js"
+            data-error="errorCallback"
+            data-complete="completeCallback"
+            data-cancel="cancelCallback">
+
+    </script>
+
+
+    <script type="text/javascript">
+        	
+	      var amt = getAmount();
+	      var amtsent = parseFloat(amt);
+	      var transactionId = getTransacionId();
+	      var final_phone= getPhone();
+	      var phone, transId,sname;
+	        
+    	function getPhone(){
+    	
+       		phone = JSInterface.getPhoneNumber();
+       
+        	return phone;
+      	 }
+    	function getTransacionId(){
+    	
+       		transId = JSInterface.getTransactionId();
+       
+       		return transId;
+    	}
+    	function getAmount(){
+    	
+       		final_amt= JSInterface.getFinal_amt();
+       
+       		return final_amt;
+    	}
+		function showAndroidDialog() {
+		
+        	moveToScreenTwo();
+       	}
+ 	function moveToScreenTwo() {
+ 	
+        	JSAInterface.moveToNextScreen();
+     	}	
+     	function loadingProgress() {
+ 	
+        	JSAInterface.loadingProgress();
+     	}
+       	    
+
+    </script>
+    <script type="text/javascript">
+        
+        
+        
+            function errorCallback(error) 
+            {
+                console.log(JSON.stringify(error));
+            }
+           function completeCallback() 
+            {
+             
+             window.location.href = "http://mangutransfer.com/mastercardtest/testget.php?pid=" + transactionId;
+            
+      	   	moveToScreenTwo();
+      	    
+            } 
+            function cancelCallback() 
+            
+            {
+                console.log('Payment cancelled');
+            }
+            
+            Checkout.configure({
+            
+                merchant: 'CAYMAN',
+                order: {
+                    amount: amtsent,
+                    currency: 'USD',
+                    description: final_phone,
+                    id: transactionId 
+                },
+                interaction: {
+                    merchant: {
+                        name: 'Mangu Transfer Ltd',
+                        address: {
+                            line1: 'Media Plaza, 78 Kira Road, Kamwokya',
+                            line2: 'Kampala Town'
+                        }
+                    }
+                }
+            });
+
+    </script>
+
+</head>
+
+<div class="w3-container">
+    <br>&nbsp<br/>
+    <div class="w3-card-4" style="width:100%">
+        <header class="w3-container w3-light-grey">
+            <h3>Continue to Master Card</h3>
+        </header>
+        <div class="w3-container">
+
+
+            <p>Handing over to Master card click the button to continue to check out using your visa
+                or master card</p>
+            <hr>
+
+        </div>
+
+    </div>
+</div>
+<div>
+
+    &nbsp
+
+</div>
+
+<br>
+<div class="w3-container">
+    <div class="w3-card-4" style="width:100%">
+
+        <table>
+            <tbody>
+            <tr>
+                <td>Transfer Amount:</td>
+                <td class="last">
+                    <script><p>$</p>document.write(amtsent);</script>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Receipients:</td>
+                <td class="last">
+                    <script>document.write(final_phone);</script>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Transaction Number:</td>
+                <td class="last">
+                    <script> document.write(transactionId);</script>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div>
+
+    &nbsp
+
+</div>
+
+<br>
+
+<div class="w3-container">
+    <div class="w3-card-4" style="width:100%; color:#fcb040;">
+
+        <button class="button" style="vertical-align:middle" onClick="Checkout.showLightbox();">
+            <span>Continue </span></button>
+
+    </div>
+</div>
+<script src="dist/spin.min.js"></script>
+<script src="dist/ladda.min.js"></script>
+
+<script>
+
+			// Bind normal buttons
+			Ladda.bind( '.button-demo button', { timeout: 10000 } );
+
+			// Bind progress buttons and simulate loading progress
+			Ladda.bind( '.progress-demo button', {
+				callback: function( instance ) {
+					var progress = 0;
+					var interval = setInterval( function() {
+						progress = Math.min( progress + Math.random() * 0.1, 1 );
+						instance.setProgress( progress );
+
+						if( progress === 1 ) {
+							instance.stop();
+							clearInterval( interval );
+						}
+					}, 200 );
+				}
+			} );
+
+			// You can control loading explicitly using the JavaScript API
+			// as outlined below:
+
+			// var l = Ladda.create( document.querySelector( 'button' ) );
+			// l.start();
+			// l.stop();
+			// l.toggle();
+			// l.isLoading();
+			// l.setProgress( 0-1 );
+
+
+</script>
+
+<!-- <a class="fork" href="https://github.com/hakimel/Ladda"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mangu.transfer.ui.Pay_with_mobile_money"
+    tools:showIn="@layout/activity_pay_with_mobile_money">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/textdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please use MTN and Airtel Phone Numbers Only"
+                android:textAlignment="center"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp"
+
+                />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="130sp"
+                android:layout_height="80sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/mm_logo2" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Phone Number"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp"
+
+                />
+
+            <EditText
+                android:id="@+id/phone_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/lightGray"
+
+                android:drawablePadding="8dp"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="Amount"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp"
+
+                />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/lightGray"
+                android:drawablePadding="8dp"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:paddingTop="8dp"
+                android:paddingBottom="5dp">
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pay_now"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="3dp"
+                android:background="@drawable/loginbutton_selector"
+                android:padding="5dp"
+                android:text=" Pay Now"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SignupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="4dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp">
+
+                    <EditText
+                        android:id="@+id/first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="First Name"
+                        android:inputType="textCapWords"
+                        android:padding="10dp"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/input_register_hint"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp">
+
+                    <EditText
+                        android:id="@+id/second_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Second Name"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/input_register_hint"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/description_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Country"
+                        android:textAlignment="textEnd"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/myspinner"
+                        style="@style/description_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="200dp" />
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/input_register_hint"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:background="@drawable/edit_box_drop_selector"
+                        android:dropDownWidth="200dp" />
+
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Phone"
+                        android:inputType="phone"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/input_register_hint"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/passport_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="Upload Passport/ID"
+                        android:textColor="@color/gray_text" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/takeimage"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="14dp"
+                        android:text="Browse Passport or ID"
+                        android:textColor="@color/gray_text"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/choose"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/passport_id"
+                        android:layout_marginStart="53dp"
+                        android:clickable="true"
+                        android:padding="@dimen/padding_4"
+                        android:src="@mipmap/browse" />
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="@dimen/padding_4"
+                        android:paddingRight="@dimen/padding_4" />
+
+                    <Button
+                        android:id="@+id/takeimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Take snapshot"
+                        android:textColor="@color/accent"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/textView3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="35dp"
+                        android:paddingEnd="20dp"
+                        android:src="@mipmap/browse"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/input_register_hint"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/show_hide_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/show_pwd"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/agree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="49dp"
+                            android:clickable="true"
+                            android:text="@string/agree"
+                            android:textColor="@color/gray_text" />
+                    </LinearLayout>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/confirmpassword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:hint="Confirm password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/input_register_hint"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!-- Login Button -->
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:background="@drawable/loginbutton_selector"
+                    android:text="@string/btn_register"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/abc_text_size_button_material" />
+
+
+                <!-- Link to Login Screen -->
+
+                <Button
+                    android:id="@+id/btnLinkToLoginScreen"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dip"
+                    android:background="@drawable/loginbutton_selector"
+
+                    android:text="Login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/abc_text_size_button_material" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

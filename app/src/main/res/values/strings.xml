@@ -1,0 +1,313 @@
+<resources>
+    <string name="app_name">Mangu Transfer</string>
+
+    <string name="sort_magic">Magic</string>
+    <string name="sort_popularity">Popularity</string>
+    <string name="sort_newest">Newest</string>
+    <string name="sort_end_date">Ending soon</string>
+    <string name="sort_most_funded">Most funded</string>
+    <!-- Unsorted -->
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="pledged_of">pledged of $%1$s</string>
+    <string name="backers">backers</string>
+    <string name="days_left">days left</string>
+    <string name="description">Description</string>
+    <string name="read_more">READ MORE</string>
+    <string name="explore">Explore an inspiring creative universe</string>
+    <string name="choose_category">Select category</string>
+    <string name="search_hint">Search</string>
+
+
+    <string name="art">Art</string>
+    <string name="comics">Comics</string>
+    <string name="crafts">Crafts</string>
+    <string name="dance">Dance</string>
+    <string name="design">Design</string>
+    <string name="fashion">Fashion</string>
+    <string name="film_video"><![CDATA[Film&Video]]></string>
+    <string name="food">Food</string>
+    <string name="games">Games</string>
+    <string name="journalism">Journalism</string>
+    <string name="music">Music</string>
+    <string name="photography">Photography</string>
+    <string name="publishing">Publishing</string>
+    <string name="technology">Technology</string>
+    <string name="theater">Theater</string>
+    <string name="all_categories">All categories</string>
+    <string name="created_by">Created by</string>
+    <string name="comments">Comments</string>
+    <string name="updates">Updates</string>
+    <string name="details">Details</string>
+    <string name="currency_usd">USD</string>
+    <string name="select_pledge">Select a pledge level</string>
+    <string name="reward_more_than">More than %1$d</string>
+    <string name="reward_value">%1$.0f+</string>
+    <string name="transition_project_photo">project_photo</string>
+    <string name="transition_fab">transition_fab</string>
+    <string name="transition_project_title">transition_project_title</string>
+    <string name="transition_project_progress">transition_project_progress</string>
+    <string name="transition_days_left">transition_days_left</string>
+    <string name="transition_backers_count">transition_backers_count</string>
+    <string name="transition_gathered_money_amount">transition_gathered_money_amount</string>
+    <string name="transition_days_left_label">transition_days_left_label</string>
+    <string name="transition_backers_count_label">transition_backers_count_label</string>
+    <string name="transition_gathered_money_amount_label">transition_gathered_money_amount_label</string>
+    <string name="project_details_made_by">by %1$s</string>
+    <string name="backing_in_progress">Backing progress</string>
+    <string name="funded">Funded</string>
+    <string name="back_project">Back project</string>
+    <string name="content_description_project_photo">project photo</string>
+    <string name="search">Search</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="statement4people">Mobile Money Statement</string>
+    <string name="s21_statement">Statement For Charity</string>
+    <string name="ch_statement">Statement For Charity</string>
+    <string name="farm4hire_statement">Farm Statement</string>
+    <string name="statementbank"> Bank Statement</string>
+    <string name="myprojects"> My Projects</string>
+    <string name="availableprojects">Available Projects</string>
+
+    <string name="logout">Logout</string>
+    <!--string for timer -->
+
+    <string name="content_description">Content Description</string>
+    <string name="countdown_note">Thanks for checking out the Countdown Timer.\n\nThis timer is
+		ideal for use in counting down an event start date, down to the second!!  Feel free to
+		use it in your app.</string>
+    <string name="days">Days</string>
+    <string name="hours">Hrs</string>
+    <string name="minutes">Mins</string>
+    <string name="seconds">Secs</string>
+    <string name="title_activity_countdown_timer">CountdownTimerActivity</string>
+    <!--error messages-->
+    <string name="error_network_timeout">Network Timeout Please try again</string>
+    <string name="authentification">Authentication Error</string>
+    <string name="servererror">Server Error</string>
+    <string name="networkerror">Network Error</string>
+    <string name="parseerror">Parser Error</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="nonetworkconection">No network connection. Please check your connection</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="agree">"I agree to Mangu Transfer's User agreement and Privacy policy."  </string>
+
+
+    <string name="passowrd">Password</string>
+    <string name="wronguser">Wrong username or password</string>
+
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="hide_pwd">Hide Password</string>
+    <string name="forgot">Forgotten password?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">New User? Sign Up</string>
+    <string name="fullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+
+    <string name="recordexistshere">This seems like a duplicate entry </string>
+    recordexistshere
+
+    <!-- Strings related to send mobile money -->
+
+    <string name="phone">Phone Number</string>
+    <string name="amount">Amount</string>
+
+    <!-- Strings related to sign up -->
+
+    <string name="btn_register">Sign up</string>
+    <string name="label_error_incorrect_phone">Incorrect phone number</string>
+    <string name="next">NEXT</string>
+
+    <string name="sent_to">MANGU TRANSFER</string>
+    <string name="title_activity_main">MANGU TRANSFER</string>
+    <string name="no_data_available">No Transaction</string>
+    <string name="no_project_available">No Projects</string>
+    <string name="no_farm_project_available">No Farm Project</string>
+
+
+    <string name="home">HOME</string>
+    <string name="send_to_one">SEND TO Bank</string>
+    <string name="send_to_bank">Send to Bank</string>
+    <string name="send_to_many">Send  Mobile Money</string>
+    <string name="farm_for_hire">Farm For Hire</string>
+    <string name="charity">Charity</string>
+    <string name="title_activity_send_to_one">SEND TO Bank</string>
+    <string name="title_activity_send_to_many">SEND TO MOBILE MONEY</string>
+    <string name="title_activity_cart_list">CART LIST</string>
+    <string name="title_activity_charity">CHARITY PROJECTS</string>
+    <string name="title_activity_send_to_charity">SEND TO CHARITY</string>
+    <string name="title_activity_connect_send_to_org">CONTRIBUTE TO PROJECT</string>
+    <string name="title_activity_my_project">MY PROJECTS</string>
+    <string name="title_activity_send_to_farm_for_hire">PAY FOR FARM FOR HIRE</string>
+    <string name="title_activity_cart_hire">CART LIST</string>
+    <string name="title_activity_signup">SIGN UP</string>
+    <string name="title_activity_forgotpwd">FORGET PASSWORD</string>
+    <string name="title_activity_signup_edit">USER DETAIL EDIT</string>
+    <string name="title_activity_verify_phone_fragment_edit">USER DETAIL EDIT</string>
+    <string name="title_activity__available_projects">Available Projects</string>
+    <string name="title_activity__available_farm_projects1">AVAILABLE FARM PROJECTS</string>
+    <string name="title_activity__available_farm_projects">AVAILABLE PROJECTS</string>
+    <string name="title_activity_charity_statement">Statement for Charity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_statements">STATEMENTS</string>
+    <string name="title_activity_send_to_one_statement">Mobile Money Statement</string>
+    <string name="title_activity_send_one_statement">Mobile Money Statement</string>
+    <string name="title_activity_connect_to_hire">Payment Gateway</string>
+    <string name="title_activity_connect_cart_hire">Payment Gateway</string>
+    <string name="title_activity_connect_send_to_many">Payment Gateway</string>
+    <string name="title_activity_connect_send_2_one">Payment Gateway</string>
+    <string name="title_activity_send_to_bank">Send To Bank</string>
+    <string name="title_activity_connect_send_to_bank">Payment Gateway</string>
+    <string name="title_activity_coming_soon">Coming Soon</string>
+    <string name="title_activity_coming_soonn">Coming Soon</string>
+    <string name="title_activity_bank_statement">Bank Statement</string>
+    <string name="activity_description">Project Description</string>
+
+    <string name="recipient_name">Recipient name and phone No</string>
+
+
+    <plurals name="days">
+
+        <item quantity="zero">%d Days</item>
+        <item quantity="one">%d Day</item>
+        <item quantity="other">%d Days</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="zero">%d Hours</item>
+        <item quantity="one">%d Hour</item>
+        <item quantity="other">%d Hours</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="zero">%d Minutes</item>
+        <item quantity="one">%d Minute</item>
+        <item quantity="other">%d Minutes</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="zero">%d Seconds</item>
+        <item quantity="one">%d Second</item>
+        <item quantity="other">%d Seconds</item>
+    </plurals>
+    <string name="title_activity_pay_with_mobile_money">Mobile Money</string>
+    <string name="title_activity_charity_organisation">CharityOrganisationActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="title_activity_project_description">Activity_project_description</string>
+    <string name="title_activity__delivery__address">Activity_Delivery_Address</string>
+    <string name="title_activity_product_cart_list">ProductCartList</string>
+
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <Button
+        android:id="@+id/dialogButtonAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+
+        android:background="@drawable/btn_view_cart"
+        android:text=" Add Recipient "
+        android:textColor="@color/white"
+        android:visibility="gone"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/paywithvisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogButtonAddRec"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/visa"
+        android:text=" "
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/paymobilemoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogButtonAddRec"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:background="@mipmap/mangu_to_mtn1"
+        android:textColor="@color/white" />
+
+
+    <View
+        android:id="@+id/divider_3"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="10dp"
+        android:background="@color/darkGray" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_4"
+        android:padding="18dp"
+        android:text="MTN Mobile Money, Airtel Money Master Card or Visa"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/abc_text_size_body_2_material" />
+
+
+    <View
+        android:id="@+id/divider_5"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/txtCartAmount"
+        android:layout_marginTop="0.0dip"
+        android:background="@color/darkGray" />
+
+</RelativeLayout>

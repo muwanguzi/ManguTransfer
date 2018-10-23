@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:src="@drawable/bank"
+            android:title="SEND TO BANK" />
+        <item
+            android:id="@+id/nav_gallery"
+
+            android:title="SEND TO MOBILE MONEY"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="FARM FOR HIRE"
+            app:srcCompat="@android:drawable/ic_btn_speak_now" />
+        <item
+            android:id="@+id/nav_manage"
+            android:title="CHARITY"
+            app:srcCompat="@android:drawable/ic_lock_idle_charging" />
+        <item
+            android:id="@+id/nav_project"
+            android:title="PAY FOR MY FARMS"
+            app:srcCompat="@android:drawable/ic_lock_idle_charging" />
+
+
+    </group>
+
+    <item android:title="COMMUNICATION">
+
+        <item
+            android:id="@+id/nav_share"
+            android:title="SHARE"
+            app:srcCompat="@android:drawable/ic_menu_share" />
+
+    </item>
+    <item
+        android:id="@+id/nav_change_password"
+        android:title="CHANGE PASSWORD"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+    <item
+        android:id="@+id/nav_send"
+        android:title="LOG OUT"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode" />
+
+
+</menu>

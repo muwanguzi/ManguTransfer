@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <Button
+        android:id="@+id/dialogButtonAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_6"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_view_cart"
+        android:text=" Add Recipient "
+        android:textColor="@color/white"
+
+        />
+
+
+    <Button
+        android:id="@+id/dialogButtonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogButtonAddRec"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/corner_btn_yellow"
+        android:text=" Cancel "
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/dialogButtonPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogButtonAddRec"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/corner_button"
+        android:text=" Pay "
+        android:textColor="@color/white" />
+
+
+    <View
+        android:id="@+id/divider_3"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="10dp"
+        android:background="@color/darkGray" />
+
+
+    <View
+        android:id="@+id/divider_6"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/txtCartAmount"
+        android:layout_marginTop="0.0dip"
+        android:background="@color/darkGray" />
+
+    <TextView
+        android:id="@+id/txtProjectAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_3"
+        android:layout_alignParentLeft="@+id/text"
+        android:padding="18dp"
+        android:text="Project charge:" />
+
+    <TextView
+        android:id="@+id/projectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_3"
+        android:layout_toEndOf="@id/txtProjectAmount"
+        android:layout_toRightOf="@+id/txtProjectAmount"
+        android:padding="16dp"
+        android:text="$:" />
+
+    <View
+        android:id="@+id/divider_4"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/projectText"
+        android:layout_marginTop="0.0dip"
+        android:background="@color/darkGray" />
+
+    <TextView
+        android:id="@+id/txtRecipient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_4"
+        android:layout_alignParentLeft="@+id/text"
+        android:padding="18dp"
+        android:text="Recipient(s):"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_4"
+        android:layout_toRightOf="@+id/txtRecipient"
+        android:padding="18dp"
+        android:text="0.00"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+    <View
+        android:id="@+id/divider_5"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/text"
+        android:layout_marginTop="0.0dip"
+        android:background="@color/darkGray" />
+
+    <TextView
+        android:id="@+id/txtAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_5"
+        android:layout_alignParentLeft="@+id/text"
+        android:padding="18dp"
+        android:text="Total Amount:"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/abc_text_size_body_2_material" />
+
+    <TextView
+        android:id="@+id/txtCartAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_5"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/txtAmount"
+        android:padding="16dp"
+        android:text="0.00"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+</RelativeLayout>

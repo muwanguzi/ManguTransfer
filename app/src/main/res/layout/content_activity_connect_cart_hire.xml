@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_activity_connect_cart_hire"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_4"
+    android:paddingTop="@dimen/padding_4"
+    android:paddingRight="@dimen/padding_4"
+    android:paddingBottom="@dimen/padding_4"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mangu.transfer.ui.Activity_connect_cart_hire"
+    tools:showIn="@layout/activity_connect_cart_hire">
+
+    <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webkit"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ProgressBar
+        android:id="@+id/my_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</RelativeLayout>

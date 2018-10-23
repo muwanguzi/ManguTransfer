@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mangu.transfer.ui.Activity_connect_send_to_bank">
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.68"
+            android:text="Bank"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:targetApi="lollipop" />
+
+        <Spinner
+            android:id="@+id/myspinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/acc_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Account Number"
+            android:inputType="text"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/contact_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/acc_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Account Name"
+            android:inputType="number"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_sendReceive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/placeholder_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="UGX:"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <EditText
+                android:id="@+id/editText_send"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="0.00"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="5.0dip"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightGray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.0"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/placeholder_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:background="@null"
+                android:text="Dollars:"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <EditText
+                android:id="@+id/editText_receive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="0.00"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="5.0dip"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightGray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText_receive"
+                android:clickable="true"
+                android:text="error"
+                android:textColor="@android:color/holo_red_light"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@color/colorPrimary"
+        android:text="time"
+        android:textColor="@android:color/white" />
+</LinearLayout>
+

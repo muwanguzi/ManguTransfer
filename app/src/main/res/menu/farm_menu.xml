@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/farm_statement"
+        android:orderInCategory="100"
+        android:title="@string/farm4hire_statement"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/available_project"
+        android:orderInCategory="100"
+        android:title="@string/availableprojects"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/myprojects"
+        android:orderInCategory="100"
+        android:title="@string/myprojects"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="100"
+        android:title="@string/logout"
+        app:showAsAction="never" />
+</menu>

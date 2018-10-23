@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@drawable/button_top_style_1"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_row_selector"
+            android:padding="8dp">
+
+            <View
+                android:id="@+id/vline1"
+                android:layout_width="3dp"
+                android:layout_height="300dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/cash_back_background" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="8dp"
+                android:layout_toEndOf="@+id/vline1"
+                android:src="@drawable/fish_tank" />
+
+
+            <!-- Movie Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <!--
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:layout_marginLeft="20sp"
+                android:padding="2sp"-->
+
+            <!-- Rating -->
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:textSize="14sp" />
+
+            <!-- Genre -->
+
+
+            <TextView
+                android:id="@+id/additional_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:textColor="@color/list_txt"
+                android:textSize="12sp" />
+
+            <!-- Release Year -->
+            <TextView
+                android:id="@+id/other_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/additional_text"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:textColor="@color/list_txt"
+                android:textSize="12dp" />
+
+            <!-- Release Year -->
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15sp"
+                android:paddingTop="40sp"
+                android:src="@mipmap/angle_right_24px" />
+
+            <Button
+                android:id="@+id/btnPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/additional_text"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/corner_btn_yellow"
+                android:elevation="1dp"
+                android:focusable="false"
+                android:padding="10dp"
+                android:text="Details"
+                android:textColor="@color/white"
+                android:textSize="6sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/additional_text"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/corner_button"
+                android:padding="10dp"
+                android:text="Pay"
+                android:textColor="@color/white"
+                android:textSize="6sp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/hline1"
+                android:layout_width="80dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/cash_back_background"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/hline2"
+                android:layout_width="80dp"
+                android:layout_height="2dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/cash_back_background"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

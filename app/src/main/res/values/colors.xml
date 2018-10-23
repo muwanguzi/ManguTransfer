@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff6600</color>
+    <color name="colorPrimaryDark">#800000</color>
+    <color name="colorAccent">#ff6600</color>
+
+    <color name="header">#fe1b0f</color>
+    <color name="yellow">#ff9900</color>
+
+    <color name="text">#cc000000</color>
+    <color name="shadow">#505050</color>
+    <color name="background">#2c1f1a</color>
+    <color name="caption">#372721</color>
+    <color name="copyright">#503b32</color>
+    <color name="setting_devider">#503b32</color>
+    <color name="background_color">#f7f7f7</color>
+    <color name="hint">#50235A</color>
+    <color name="subtext">#bdbdbd</color>
+    <color name="image_background">#999999</color>
+    <color name="background_actionbar">#50235A</color>
+    <color name="detail_background">#372721</color>
+    <color name="list_item_title">#fff</color>
+    <color name="mangu_red">#fe1b0f</color>
+
+    <!-- background menu -->
+    <color name="list_background">#FFFFFF</color>
+
+    <!-- cash back background  -->
+    <color name="cash_back_background">#FF9800</color>
+    <!-- background menu dipencet -->
+    <color name="list_background_pressed">#FF9800</color>
+
+    <!-- jarak antar menu -->
+    <color name="list_divider">#C3C3C3</color>
+
+    <!-- app background -->
+    <color name="app_bg">#EEEEEE</color>
+
+    <!-- divider -->
+    <color name="divider">#257CC1</color>
+    <color name="btn_bg">#40A8D6</color>
+    <color name="btn_text">#FFFFFF</color>
+    <color name="form_bg">#FFFFFF</color>
+    <color name="form_border">#40A8D6</color>
+
+    <color name="white">#ffffff</color>
+
+
+    <color name="title">#FFFFFF</color>
+
+    <color name="apptheme_primary">#009688</color>
+    <color name="apptheme_primary_dark">#00796b</color>
+    <color name="apptheme_accent">@android:color/white</color>
+
+    <color name="gradient_start">#50000000</color>
+    <color name="gradient_light_start">#30000000</color>
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
+    <!-- timer colors -->
+
+    <color name="mid_gray">#605F64</color>
+    <color name="gray_text">#7F8285</color>
+    <color name="rim_color_gray">#B0B0B0</color>
+    <color name="center_text">#D31145</color>
+    <color name="round_progress_blue">#2173B9</color>
+
+    <!--end timer colors-->
+    <color name="backgroundColor">#fff5f5f5</color>
+    <color name="com_mixpanel_android_notification_full_bg">#cc000000</color>
+    <color name="com_mixpanel_android_notification_mini_bg">#cc368ed8</color>
+    <color name="com_mixpanel_android_selected">#66ffffff</color>
+    <color name="darkGray">#ff808080</color>
+    <color name="footerGray">#ffb7b7b7</color>
+    <color name="lightGray">#ffc8c8c8</color>
+    <color name="ratesRed">#fffe9493</color>
+    <color name="transparentDarkGray">#cc000000</color>
+    <color name="transparentGray">#66000000</color>
+    <color name="waveBlue">#ff6600</color>
+    <color name="waveHighlightedBlue">#FCB040</color>
+    <color name="waveOrangeColor">#FCB040</color>
+    <color name="waveTransparentBlue">#253697fb</color>
+
+    <color name="primary">#E43F3F</color>
+    <color name="primary_dark">#E12929</color>
+    <color name="primary_darker">#CC1D1D</color>
+    <color name="accent">#ffffff</color>
+    <color name="blue">#cc368ed8</color>
+    <color name="lightskyblue">#87CEFA</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="bkg_card">#8C9EFF</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="grey_light">#E0E0E0</color>
+    <color name="gen_white">#E0E0E0</color>
+
+    <color name="gen_black">#222222</color>
+
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+
+    <color name="view_background">#e8ecfa</color>
+    <color name="txt_font">#4e5572</color>
+    <color name="list_txt">#689f38</color>
+    <color name="mangu_yellow">#ffa300</color>
+    <color name="action_bar">#1f2649</color>
+
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+
+    <color name="checkout_btn">#5cb85c</color>
+    <color name="green_light">#5cb85c</color>
+
+
+    <color name="beige">#c6abaa</color>
+    <color name="main_bg">#f2f2f2</color>
+    <color name="text_grey">#A1A1A1</color>
+    <color name="black_33">#1C000000</color>
+    <color name="green_primary">#00E16A</color>
+
+    <color name="project_author_name">#919191</color>
+
+</resources>

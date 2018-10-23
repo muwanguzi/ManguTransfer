@@ -1,0 +1,170 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="android:dropDownListViewStyle">@style/MyDropDownListView</item>
+        <item name="android:textColor">@color/gray_text</item>
+
+
+    </style>
+
+    <style name="wrapping_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/micro_padding</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+    <!-- style the items within the overflow menu -->
+    <style name="MyDropDownListView" parent="android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/ad_selectable_background</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColorPrimary">@color/genre</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--spinner style-->
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/spinner_item_border</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">#DFFFFFFF</item>
+    </style>
+    <!-- bootstrap style -->
+
+    <style name="example_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">@dimen/default_padding</item>
+        <item name="android:paddingBottom">32dp</item>
+    </style>
+
+    <style name="description_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="example_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/micro_padding</item>
+    </style>
+
+
+    <style name="wrapping_fa_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize" tools:ignore="SpUsage">50dp</item>
+    </style>
+
+    <style name="progress_weight_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/micro_padding</item>
+    </style>
+
+    <style name="progress_example">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2.5</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="home_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="bootstrapBrand">primary</item>
+        <item name="bootstrapSize">lg</item>
+        <item name="showOutline">true</item>
+        <item name="roundedCorners">true</item>
+    </style>
+
+    <style name="ProjectSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/main_bg</item>
+    </style>
+
+
+    <style name="ProjectDescription">
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+
+    <style name="ProjectAuthorDetails">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/black_33</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="ProjectAuthorDescContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">@dimen/project_auth_padding</item>
+        <item name="android:paddingTop">@dimen/project_auth_padding</item>
+    </style>
+
+    <style name="ProjectAuthorValueStyle">
+        <item name="android:background">@drawable/rounded_buble</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_width">55dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+
+    <style name="ProjectAuthorDescStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/project_author_name</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+</resources>

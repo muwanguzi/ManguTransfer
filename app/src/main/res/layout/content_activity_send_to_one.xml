@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_activity_send_to_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mangu.transfer.ui.Activity_send_to_one"
+    tools:showIn="@layout/activity_send_to_one">
+
+
+    <TextView
+        android:id="@+id/placeholder_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="3.0dip"
+        android:text="To:"
+        android:textColor="@color/gray_text" />
+
+    <LinearLayout
+        android:id="@+id/enter_recipient"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/placeholder_to"
+        android:layout_toRightOf="@+id/placeholder_to"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.mangu.transfer.util.AutoCompleteTextView
+            android:id="@+id/enter_recipient_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/placeholder_to"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/placeholder_to"
+            android:layout_weight="1.0"
+            android:background="@android:color/transparent"
+            android:completionThreshold="1"
+            android:dropDownAnchor="@+id/placeholder_to"
+            android:dropDownWidth="fill_parent"
+            android:dropDownHeight="fill_parent"
+            android:dropDownHorizontalOffset="-50.0dip"
+            android:hint="Recipient Name"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textVisiblePassword|textNoSuggestions"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="3.0dip"
+            android:textColor="@color/black"
+            android:textColorHint="@color/lightGray"
+            android:textSize="14sp" />
+
+
+        <ImageButton
+            android:id="@+id/country_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10.0dip"
+            android:paddingBottom="3.0dip"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/flag_ug" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@+id/enter_recipient"
+        android:layout_marginTop="2.0dip"
+        android:background="@color/darkGray" />
+
+    <RelativeLayout
+        android:id="@+id/selected_recipient"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="3.0dip">
+
+        <!--<TextView
+            android:id="@+id/selected_recipient_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/clear_selected_recipient"
+            android:paddingLeft="40.0dip"
+            android:text="Recipient Name"
+            android:textAppearance="@style/ComposerTextMedium"
+            android:textColor="@color/waveBlue" />-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_sendReceive"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_1"
+        android:layout_marginTop="0.0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/placeholder_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="UGX:"
+                android:textColor="@color/gray_text" />
+
+            <EditText
+                android:id="@+id/editText_send"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="0.00"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="5.0dip"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightGray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/placeholder_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:background="@null"
+                android:text="Dollars:"
+                android:textColor="@color/gray_text" />
+
+            <EditText
+                android:id="@+id/editText_receive"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="0.00"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="5.0dip"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightGray"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    <TextView
+           android:id="@+id/credit_receive_message"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignRight="@+id/selected_recipient"
+           android:layout_below="@+id/selected_recipient"
+           android:layout_marginTop="-7.0dip"
+           android:text="Includes $10 bonus"
+           android:textColor="#ff6fb611"
+           android:textSize="11.0sp" /> -->
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@+id/linearLayout_sendReceive"
+        android:layout_marginTop="0.0dip"
+        android:background="@color/darkGray" />
+
+    <TextView
+        android:id="@+id/lbl_waveRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9.0dip"
+        android:text=""
+        android:textColor="@color/darkGray" />
+
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9.0dip"
+        android:clickable="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    <!-- android:text="Error Message Is Here" -->
+
+
+    <RelativeLayout
+        android:id="@+id/explainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_message"
+        android:layout_marginTop="0.0dip">
+
+        <TextView
+            android:id="@+id/rate_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:textColor="#ff6fb611"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_promo_code"
+            android:layout_width="fill_parent"
+            android:layout_height="24.0dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5.0dip"
+            android:background="@android:color/transparent"
+            android:textAppearance="@android:style/TextAppearance.Material.Small" />
+        <!--  android:text="Got a promo code?" -->
+
+
+        <ImageView
+            android:id="@+id/imageView_explainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate_message"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:src="@mipmap/mangu_to_mtn" />
+
+        <TextView
+            android:id="@+id/lbl_explainerRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView_explainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:text="Instant Transfer at the Best Rates"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/darkGray" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Next"
+        android:textColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/explainer"
+
+        android:layout_alignStart="@+id/lbl_waveRate"
+        android:layout_marginTop="76dp" />
+
+
+</RelativeLayout>
