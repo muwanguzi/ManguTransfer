@@ -20,7 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginTop="56dp"
             android:orientation="vertical">
 
 
@@ -71,6 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="\u2022 Pattern: printed"
+                    android:visibility="gone"
                     android:textColor="@color/gen_black"
                     android:textSize="12dp"
                     tools:ignore="WebViewLayout" />
@@ -249,6 +250,17 @@
 
                 android:paddingBottom="@dimen/activity_vertical_margin">
 
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Wishlist"
+                    android:textColor="@color/gen_black"
+                    android:textSize="12dp" />
 
             </LinearLayout>
         </LinearLayout>

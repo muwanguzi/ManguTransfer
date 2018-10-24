@@ -73,11 +73,11 @@ public class CustomListAdapterProduct extends BaseAdapter {
         //rating
         rating.setText(String.valueOf(m.getRating()));
         // genre
-       /* String genreStr = "";
+        /*String genreStr = "";
         for (String str : m.getGenre()) {
             genreStr += str + ", ";
-        }
-*/
+        }*/
+
 
         // release year
         year.setText(String.valueOf(m.getYear()));

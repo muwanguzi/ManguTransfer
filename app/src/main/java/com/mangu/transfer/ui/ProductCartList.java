@@ -46,10 +46,6 @@ import java.util.Map;
 
 public class ProductCartList extends AppCompatActivity {
 
-    private static final String TAG = ProductCartList.class.getSimpleName();
-
-    // Movies json url
-    private static final String url = "";
     final Context context = this;
     public ProgressDialog pDialog;
     ImageView dialogButtonPayWithMm;
@@ -177,7 +173,7 @@ public class ProductCartList extends AppCompatActivity {
                 //post_then_checkout(m_moneySenderId);
             }
         };
-//        m_master_button.setOnClickListener(continue_listener);
+            //m_master_button.setOnClickListener(continue_listener);
     }
 
     public void paywith(final AlertDialog mydialog) {
@@ -187,20 +183,14 @@ public class ProductCartList extends AppCompatActivity {
         //   Button dialogButtonPayWithMmAddRec = (Button) dialog.findViewById(R.id.dialogButtonPayWithMmAddRec);
         dialogButtonPayWithMmPayWithVisa = dialog.findViewById(R.id.paywithvisa);
 
-
         // if button is clicked, close the custom dialog
         dialogButtonPayWithMm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                DecimalFormat fmt = new DecimalFormat("0.00");
-
+                //DecimalFormat fmt = new DecimalFormat("0.00");
                 Intent intent = new Intent(ProductCartList.this, Pay_with_mobile_money.class);
                 //double mDoubleAmountEntered = Double.valueOf(m_amountEntered);
-
-
                 startActivity(intent);
-
                 dialog.dismiss();
             }
         });
@@ -209,13 +199,9 @@ public class ProductCartList extends AppCompatActivity {
         dialogButtonPayWithMmPayWithVisa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 DecimalFormat fmt = new DecimalFormat("0.00");
-
                 Intent intent = new Intent(ProductCartList.this, Activity_connect_send_to_org.class);
-
                 startActivity(intent);
-
                 dialog.dismiss();
 
             }
@@ -318,12 +304,10 @@ public class ProductCartList extends AppCompatActivity {
 
     public void getFarmProject(final String sessionId) {
         //pDialog.setMessage("Processing...");
-
         StringRequest cartlist = new StringRequest(Request.Method.POST, Constant.VIEWCARTLIST,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
                         if (response.isEmpty() || response == "") {
                             hideDialog();
                             // emptyView.setVisibility(View.VISIBLE);
@@ -331,17 +315,17 @@ public class ProductCartList extends AppCompatActivity {
 
                         try {
                             JSONArray jsonArray = new JSONArray(response);
-                            DecimalFormat formatter = new DecimalFormat("#,###.00");
+                            //DecimalFormat formatter = new DecimalFormat("#,###.00");
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject obj = jsonArray.getJSONObject(i);
                                 Custom_list_model custom_list_model = new Custom_list_model();
 
 
-                                custom_list_model.setTitle("Tinned Fish");
+                                custom_list_model.setTitle(obj.getString("ItemName"));
                                 custom_list_model.setDescription("Good staff");
-                                custom_list_model.setAdditional_info("8000");
-                                custom_list_model.setOther_details("Time");
-                                custom_list_model.setM_id("nice");
+                                custom_list_model.setAdditional_info(obj.getString("ItemPrice"));
+                                custom_list_model.setOther_details(obj.getString("Quantity"));
+                                custom_list_model.setM_id(obj.getString("TotalPrice"));
 
                                 FarmProjectList.add(custom_list_model);
                                 adapter.notifyDataSetChanged();
@@ -352,7 +336,7 @@ public class ProductCartList extends AppCompatActivity {
                                 amount_x = obj.getString("OverallTotal");
                                 // adding charityOrganisation to movies array
                                 FarmProjectList.add(custom_list_model);
-                                adapter.notifyDataSetChanged();*/
+             1                   adapter.notifyDataSetChanged();*/
                             }
                         } catch (JSONException e) {
                             // JSON error
@@ -479,7 +463,7 @@ public class ProductCartList extends AppCompatActivity {
         // TODO Auto-generated method stub
         super.onBackPressed();
 
-        Intent intent = new Intent(ProductCartList.this, Activity_send_to_many.class);
+        Intent intent = new Intent(ProductCartList.this, Activity_product_description.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
         finish();

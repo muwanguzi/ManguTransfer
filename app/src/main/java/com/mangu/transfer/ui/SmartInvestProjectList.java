@@ -38,8 +38,7 @@ public class SmartInvestProjectList extends AppCompatActivity {
     private static final String url = "https://mangumangu.com/json/getsmartinvestprojects.aspx";
     String itempriceid = "";
     private ProgressDialog pDialog;
-    private List<Product> movieList = new ArrayList<Product>();
-    private ListView listView;
+    private List<Product> movieList = new ArrayList<>();
     private CustomListAdapterProduct adapter;
 
     @Override
@@ -52,18 +51,17 @@ public class SmartInvestProjectList extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Product List");
-        listView = findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
         adapter = new CustomListAdapterProduct(this, movieList);
         listView.setAdapter(adapter);
 
         pDialog = new ProgressDialog(this);
-        // Showing progress dialog before making http request
+        //Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
         pDialog.show();
 
         // changing action bar color
         //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1b1b1b")));
-
         // Creating volley request obj
 
         listView.setOnItemClickListener(
@@ -71,16 +69,12 @@ public class SmartInvestProjectList extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
                         TextView txt_org_id = view.findViewById(R.id.id);
-
                         itempriceid = txt_org_id.getText().toString();
-
                         Intent intent = new Intent(SmartInvestProjectList.this, Activity_SmartInvestProduct_description.class);
-
                         intent.putExtra("itempriceid", itempriceid);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         finish();
                         startActivity(intent);
-
                     }
                 }
         );
@@ -90,7 +84,6 @@ public class SmartInvestProjectList extends AppCompatActivity {
                     public void onResponse(JSONArray response) {
                         Log.d(TAG, response.toString());
                         hidePDialog();
-
                         // Parsing json
                         for (int i = 0; i < response.length(); i++) {
                             try {
@@ -98,19 +91,16 @@ public class SmartInvestProjectList extends AppCompatActivity {
                                 JSONObject obj = response.getJSONObject(i);
                                 Product product = new Product();
                                 product.setTitle(obj.getString("ManguProjectName"));
-                                // movie.setThumbnailUrl(obj.getString("ProjectPhoto"));
-                                // movie.setRating(obj.getDouble("UGX"));
-                                // movie.setYear(obj.getInt("ItemPriceID"));
-
+                                product.setThumbnailUrl(obj.getString("ProjectPhoto"));
+                                product.setRating(obj.getDouble("UGX"));
+                                product.setYear(obj.getInt("Expectedreturn"));
 
                                 movieList.add(product);
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
                         }
-
                         // notifying list adapter about data changes
                         // so that it renders the list view with updated data
                         adapter.notifyDataSetChanged();
@@ -120,14 +110,21 @@ public class SmartInvestProjectList extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 hidePDialog();
-
             }
         });
-
         // Adding request to request queue
         AppControllerList.getInstance().addToRequestQueue(movieReq);
     }
 
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        Intent intent = new Intent(SmartInvestProjectList.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        overridePendingTransition(R.anim.open_main, R.anim.close_next);
+    }
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -143,9 +140,8 @@ public class SmartInvestProjectList extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        /** Inflate the menu; this adds items to the action bar if it is present.
-         *
-         */
+        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.cartlist, menu);
         return true;
     }

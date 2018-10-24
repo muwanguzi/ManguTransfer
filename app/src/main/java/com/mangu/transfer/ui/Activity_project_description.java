@@ -101,7 +101,7 @@ public class Activity_project_description extends AppCompatActivity {
         m_senderId = Integer.valueOf(m_senderParam);
 
         txtproject_name = findViewById(R.id.project_name);
-        txtProject_Desc = findViewById(R.id.project_description);
+        txtProject_Desc = findViewById(R.id.description);
         txtAmount_needed = findViewById(R.id.amount_needed);
         btn_donate = findViewById(R.id.btndonate);
         txtAmount_collected = findViewById(R.id.amount_collected);
@@ -326,7 +326,7 @@ public class Activity_project_description extends AppCompatActivity {
         // TODO Auto-generated method stub
         super.onBackPressed();
 
-        Intent intent = new Intent(Activity_project_description.this, MainActivity.class);
+        Intent intent = new Intent(Activity_project_description.this, SmartInvestProjectList.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
         finish();

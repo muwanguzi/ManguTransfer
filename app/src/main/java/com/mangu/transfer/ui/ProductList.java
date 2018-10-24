@@ -128,6 +128,17 @@ public class ProductList extends AppCompatActivity {
         AppControllerList.getInstance().addToRequestQueue(movieReq);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        Intent intent = new Intent(ProductList.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        overridePendingTransition(R.anim.open_main, R.anim.close_next);
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();

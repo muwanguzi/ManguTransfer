@@ -113,7 +113,7 @@ public class Activity_product_description extends AppCompatActivity {
 
         imagename = findViewById(R.id.imgPreview);
         txtproject_name = findViewById(R.id.txtText);
-        txtProject_Desc = findViewById(R.id.txtDescription);
+        txtProject_Desc = findViewById(R.id.description);
         txtAmount_needed = findViewById(R.id.txtPrice);
         btn_donate = findViewById(R.id.btnAdd);
         txtAmount_collected = findViewById(R.id.status);
@@ -441,9 +441,7 @@ public class Activity_product_description extends AppCompatActivity {
     public void onBackPressed() {
         // TODO Auto-generated method stub
         super.onBackPressed();
-
-        Intent intent = new Intent(Activity_product_description.this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        Intent intent = new Intent(Activity_product_description.this, ProductList.class);
         startActivity(intent);
         finish();
         overridePendingTransition(R.anim.open_main, R.anim.close_next);

@@ -479,7 +479,7 @@ public class SmartInvestProductCartList extends AppCompatActivity {
         // TODO Auto-generated method stub
         super.onBackPressed();
 
-        Intent intent = new Intent(SmartInvestProductCartList.this, Activity_send_to_many.class);
+        Intent intent = new Intent(SmartInvestProductCartList.this, Activity_SmartInvestProduct_description.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
         finish();

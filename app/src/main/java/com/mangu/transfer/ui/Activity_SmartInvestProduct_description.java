@@ -438,8 +438,7 @@ public class Activity_SmartInvestProduct_description extends AppCompatActivity {
     public void onBackPressed() {
         // TODO Auto-generated method stub
         super.onBackPressed();
-
-        Intent intent = new Intent(Activity_SmartInvestProduct_description.this, MainActivity.class);
+        Intent intent = new Intent(Activity_SmartInvestProduct_description.this, SmartInvestProjectList.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
         finish();

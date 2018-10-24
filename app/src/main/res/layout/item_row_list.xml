@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#e2e4fe"
     android:padding="4dp">
@@ -9,7 +9,6 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
         android:descendantFocusability="afterDescendants">
@@ -23,17 +22,18 @@
             <View
                 android:id="@+id/vline1"
                 android:layout_width="3dp"
-                android:layout_height="100dp"
+                android:layout_height="120dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:background="@color/cash_back_background" />
 
             <ImageView
                 android:id="@+id/thumbnail"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_toEndOf="@+id/vline1"
                 android:src="@drawable/fish_tank"
                 android:visibility="visible" />
@@ -43,8 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@+id/thumbnail"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -53,8 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title"
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@+id/thumbnail"
+                android:text="description"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:textSize="14sp" />
 
             <TextView
@@ -62,9 +63,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/description"
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@+id/thumbnail"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:textColor="@color/list_txt"
+                android:text="additional"
                 android:textSize="12sp" />
 
             <TextView
@@ -72,8 +74,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/additional_text"
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@+id/thumbnail"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/thumbnail"
+                android:text="other details"
                 android:textColor="@color/list_txt"
                 android:textSize="12dp" />
 
@@ -81,33 +84,42 @@
                 android:id="@+id/details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/other_details"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:textSize="12dp"
-                android:visibility="gone" />
+                android:visibility="visible"
+                android:text="details"/>
 
             <TextView
                 android:id="@+id/id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/details"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:textSize="12dp"
-                android:visibility="gone" />
+                android:text="id"
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/other_details"
-
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@+id/thumbnail"
-                android:textSize="12dp" />
+                android:layout_below="@+id/id"
+                android:text="data"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/thumbnail"
+                android:textSize="12sp" />
 
             <ImageView
                 android:id="@+id/arrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="15sp"
-                android:paddingTop="40sp"
+                android:layout_marginEnd="15sp"
+                android:paddingTop="50sp"
+                android:foregroundGravity="center"
                 android:src="@mipmap/angle_right_24px" />
 
             <Button
@@ -115,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/additional_text"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/corner_btn_yellow"
                 android:elevation="1dp"
@@ -132,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/additional_text"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="40dp"
+                android:layout_marginEnd="40dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/corner_button"
                 android:padding="10dp"
@@ -146,8 +158,8 @@
                 android:layout_width="80dp"
                 android:layout_height="2dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp"
                 android:background="@color/cash_back_background"
                 android:visibility="gone" />
 
@@ -157,8 +169,8 @@
                 android:layout_height="2dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="30dp"
                 android:background="@color/cash_back_background"
                 android:visibility="gone" />
 
